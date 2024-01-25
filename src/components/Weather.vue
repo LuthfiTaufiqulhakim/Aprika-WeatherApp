@@ -78,7 +78,7 @@ import DaysWeather from './DaysWeather.vue'
   .main-div {
     border-radius: 20px;
     color: #fff;
-    background-image: url('C:\xampp\htdocs\aprika-weatherapp\src\assets\image1.jpg');
+    background-image: url('../assets/image1.jpg');
     background-size: cover;
     background-position: center;
     background-color: rgba(0, 0, 0, 0.5);
