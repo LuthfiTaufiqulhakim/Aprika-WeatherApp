@@ -4,12 +4,12 @@
       <div class="card main-div w-100">
         <div class="p-3">
           <h2 class="mb-1 day">Tuesday</h2>
-          <p class=" date mb-0">date</p>
+          <p class="date mb-0">date</p>
           <small> time</small>
           <h2 class="place">
             <i class="fa fa-location">rio <small>Country</small></i>
           </h2>
-          <div class="temp"> 
+          <div class="temp">
             <h1 class="weather-temp">19&deg;</h1>
             <h2 class="">description</h2>
           </div>
@@ -50,7 +50,7 @@
 </template>
 
 <script>
-import DaysWeather from './DaysWeather.vue'
+  import DaysWeather from "./DaysWeather.vue";
 
   export default (await import("vue")).defineComponent({
     name: "myWeather",
@@ -78,18 +78,21 @@ import DaysWeather from './DaysWeather.vue'
   .main-div {
     border-radius: 20px;
     color: #fff;
-    background-image: url('C:\xampp\htdocs\aprika-weatherapp\src\assets\image1.jpg');
+    background-image: url("../assets/image1.jpg");
     background-size: cover;
     background-position: center;
     background-color: rgba(0, 0, 0, 0.5);
     background-repeat: no-repeat;
-   
+  }
+
+  h2.place {
+    gap: 20px;
   }
 
   .temp {
-    position: absolute;
-    bottom: 0;
-    
+  }
+
+  .weather-temp {
   }
 
   .main-div.hover {
@@ -99,9 +102,11 @@ import DaysWeather from './DaysWeather.vue'
   }
 
   .card-2 {
-    background-color: #212730;
+    background-color: #343d4b;
     border-radius: 20px;
+    
   }
+
   /* h2,
   p{
     padding: 0 25px 0;
