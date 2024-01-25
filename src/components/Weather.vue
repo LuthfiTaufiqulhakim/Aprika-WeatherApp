@@ -86,13 +86,8 @@
   }
 
   h2.place {
-    gap: 20px;
-  }
-
-  .temp {
-  }
-
-  .weather-temp {
+    gap: 20px; 
+    
   }
 
   .main-div.hover {
