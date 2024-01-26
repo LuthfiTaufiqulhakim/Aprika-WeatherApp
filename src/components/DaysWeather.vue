@@ -36,7 +36,7 @@
   .days-tab {
     width: 90%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border-radius: 20px;
+    border-radius: 20px !important;
     width: 90%;
     margin: auto;
   }
@@ -64,8 +64,8 @@
     height: 35px;
   }
   .li_active {
-    background: #253d5c;
-    color: #222831;
+    background-color: #3f6145 ;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 10px;
     margin: 0.5rem;
     color: #fff;

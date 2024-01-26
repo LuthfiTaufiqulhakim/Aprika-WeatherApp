@@ -1,7 +1,7 @@
 <template>
   <div class="app">
     <div class="header container h-100 p-5">
-      <h1 class="mb-5">WeatherApp</h1>
+      <h1 class="mb-5">Aprika Weatherapp</h1>
       <div class="d-flex justify-content-center h-100">
         <div class="searchbar w-50 mx-2">
           <input
@@ -46,18 +46,24 @@
 
 <style>
   body {
-    background-color: #121212 !important;
+    background-color: #a3b18a !important;
   }
 
   .header {
-    background-color: #212738;
+    background-color: #3a5a40;
     border-radius: 20px;
     color: azure;
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     margin-top: 5rem;
+    margin-bottom: 1rem ;
+    
   }
 
   .btn-search {
-    background-image: linear-gradient(to right, cyan, magenta);
+    background-image: linear-gradient(to right, #588157, #3a5a40);
+  }
+  .btn-search:active {
+        transform: translateY(4px);
+
   }
 </style>
