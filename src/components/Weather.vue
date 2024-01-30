@@ -1,9 +1,9 @@
 <template>
   <div class="container p-0">
-    <div class="d-flex">
+    <div class="d-flex gap-3">
       <div class="card main-div w-100">
         <div class="p-3">
-          <h2 class="mb-1 day">Jumatan</h2>
+          <h2 class="mb-1 day">Jumat</h2>
           <p class="date mb-0">date</p>
           <small> time</small>
           <h2 class="place">
@@ -11,7 +11,7 @@
           </h2>
           <div class="temp">
             <h1 class="weather-temp">19&deg;</h1>
-            <h2 class="">Agak Mendung</h2>
+            <h2 class="">Gerimis</h2>
           </div>
         </div>
       </div>
@@ -19,15 +19,15 @@
         <table class="m-4">
           <tbody>
             <tr>
-              <th>Sea Level</th>
+              <th>Wind</th>
+              <td>Km/h</td>
+            </tr>
+            <tr>
+              <th>Humidity</th>
               <td>100</td>
             </tr>
             <tr>
-              <th>Sea Level</th>
-              <td>100</td>
-            </tr>
-            <tr>
-              <th>Sea Level</th>
+              <th>precipitation</th>
               <td>100</td>
             </tr>
           </tbody>
@@ -35,17 +35,11 @@
 
         <DaysWeather></DaysWeather>
 
-        <div id="div_Form" class="d-flex m-3 justify-content-center">
-          <form action="">
-            <input
-              type="button"
-              value="Change Location"
-              class="btn change-btn btn-primary"
-            />
-          </form>
-        </div>
+        <br>
       </div>
     </div>
+    
+
   </div>
 </template>
 
@@ -56,6 +50,8 @@
     name: "myWeather",
     components: {
       DaysWeather,
+      
+      
     },
   });
 </script>
@@ -89,11 +85,7 @@
     gap: 20px;
   }
 
-  .main-div.hover {
-    transform: scale(1.1);
-    transition: transform 0.5s ease;
-    z-index: 1;
-  }
+
 
   .card-2 {
     background-color: #3a5a40 !important;
@@ -123,4 +115,5 @@
   .change-btn:active {
     transform: translateY(4px);
   }
+   
 </style>

@@ -8,10 +8,14 @@
             type="text"
             class="input form-control"
             v-model="city"
+            @input="searchWeather"
             placeholder="Enter a city"
           />
         </div>
-        <button class="btn-search btn btn-primary">
+        <button
+          class="btn-search btn btn-primary"
+          @click="searchWeatherWeather"
+        >
           Search <i class="fas fa-Search"></i>
         </button>
       </div>
@@ -36,34 +40,43 @@
     },
     methods: {
       async searchWeather() {
-        this.showWeather = false;
-        await this.$nextTick();
-        this.showWeather = true;
+        try {
+          this.showWeather = false;
+          const response = await fetch(
+            `https://api.weatherapi.com/v1/current.json?key=YOUR_API_KEY&q=${this.city}`
+          );
+          const data = await response.json();
+
+          console.log(data);
+          this.showWeather = true;
+        } catch (error) {
+          console.error("Error fetching weather data:", error);
+        }
       },
     },
   });
 </script>
 
 <style>
-  body {
-    background-color: #a3b18a !important;
-  }
+    body {
+      background-color: #a3b18a !important;
+    }
 
-  .header {
-    background-color: #3a5a40;
-    border-radius: 20px;
-    color: azure;
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-    margin-top: 5rem;
-    margin-bottom: 1rem ;
-    
-  }
+    .header {
+      background-color: #3a5a40;
+      border-radius: 20px;
+      color: azure;
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      margin-top: 5rem;
+      margin-bottom: 1rem;
+    }
 
-  .btn-search {
-    background-image: linear-gradient(to right, #588157, #3a5a40);
-  }
-  .btn-search:active {
-        transform: translateY(4px);
+    .btn-search {
+      background-image: linear-gradient(to right, #588157, #3a5a40);
+    }
 
-  }
+    .btn-search:active {
+      transform: translateY(4px);
+    }
+  
 </style>
