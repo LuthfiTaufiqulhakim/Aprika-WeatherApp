@@ -8,25 +8,24 @@
             type="text"
             class="input form-control"
             v-model="city"
-            @input="searchWeather"
             placeholder="Enter a city"
-          />
+          >
         </div>
         <button
           class="btn-search btn btn-primary"
-          @click="searchWeatherWeather"
+          @click="searchWeather"
         >
           Search <i class="fas fa-Search"></i>
         </button>
       </div>
     </div>
-    <Weather></Weather>
+
+    <Weather :city="city" v-if="showWeather"></Weather>
   </div>
 </template>
 
 <script>
   import Weather from "./components/Weather.vue";
-
   export default (await import("vue")).defineComponent({
     name: "App",
     components: {
@@ -42,12 +41,7 @@
       async searchWeather() {
         try {
           this.showWeather = false;
-          const response = await fetch(
-            `https://api.weatherapi.com/v1/current.json?key=YOUR_API_KEY&q=${this.city}`
-          );
-          const data = await response.json();
-
-          console.log(data);
+          await this.$nextTick()
           this.showWeather = true;
         } catch (error) {
           console.error("Error fetching weather data:", error);
@@ -55,6 +49,7 @@
       },
     },
   });
+  
 </script>
 
 <style>
