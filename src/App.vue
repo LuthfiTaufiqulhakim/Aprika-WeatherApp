@@ -9,6 +9,7 @@
             class="input form-control"
             v-model="city"
             placeholder="Enter a city"
+            @keyup.enter="searchWeather"
           >
         </div>
         <button
