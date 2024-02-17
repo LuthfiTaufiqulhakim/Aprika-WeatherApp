@@ -96,6 +96,7 @@ export default (await import('vue')).defineComponent({
     border-radius: 20px !important;
     width: 90%;
     margin: auto;
+    border-radius: 0 0 0 75px !important;
 }
 .Loading {
     color: #fff;
@@ -121,7 +122,8 @@ span {
     height: 35px;
 }
 .li_active {
-    background-color: #3f6145;
+    background-color: #1c2524b0 ;
+      backdrop-filter: blur(2px);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 10px;
     margin: 0.5rem;

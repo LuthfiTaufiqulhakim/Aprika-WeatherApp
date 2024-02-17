@@ -39,6 +39,7 @@
             </div>
         </div>
     </div>
+    <div class="footer">Powered by Luthfith & Saiful Islam</div>
 </template>
 
 <script>
@@ -163,7 +164,11 @@ h2.mb-1.day {
     border-radius: 20px !important;
     color: #ffffff !important;
     background-image: url('../assets/image1.jpg');
-    background-size: cover;
+
+    border-radius: 0 75px 0 75px !important;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    filter: grayscale(90%) !important;
+    background-size: 150%;
     background-position: center;
     background-color: rgba(0, 0, 0, 0.5);
     background-repeat: no-repeat;
@@ -174,9 +179,11 @@ h2.place {
 }
 
 .card-2 {
-    background-color: #3a5a40 !important;
-    border-radius: 20px !important;
+    background-color: #1c2524b0 !important;
+    backdrop-filter: blur(2px);
+
     color: #fff !important;
+    border-radius: 0 0 0 75px !important;
 }
 
 /* h2,
@@ -200,5 +207,10 @@ h2.place {
 }
 .change-btn:active {
     transform: translateY(4px);
+}
+.footer {
+    margin: 3%;
+    color: #fff;
+    text-align: center;
 }
 </style>
